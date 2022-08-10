@@ -15,7 +15,7 @@ const siteMetadata = {
   twitter: '',
   facebook: '',
   youtube: '',
-  linkedin: 'https://www.linkedin.com/in/kmnowak/',
+  linkedin: 'https://www.linkedin.com/in/kmnowak/?locale=en_US',
   locale: 'en-US',
   indexPageConfig: {
     displayOnlyAboutMe: true,
