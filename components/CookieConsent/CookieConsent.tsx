@@ -1,8 +1,7 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement, useState, useEffect } from 'react'
 import cn from 'clsx'
 import { setCookie, hasCookie } from 'cookies-next'
 import s from './CookieConsent.module.css'
-import { useLayoutEffect } from 'preact/compat'
 
 const cookieMaxAge = {
   year: 60 * 60 * 24 * 365,
@@ -14,7 +13,7 @@ const GALocalConsentCookieName = 'localConsent'
 export const CookieConsent = (): ReactElement => {
   const [userChose, setUserChose] = useState(true)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const timeoutId = setTimeout(() => setUserChose(hasCookie(GALocalConsentCookieName)), 3000)
 
     return () => {
@@ -25,10 +24,11 @@ export const CookieConsent = (): ReactElement => {
   const acceptCookie = () => {
     setUserChose(true)
     setCookie(GALocalConsentCookieName, 'true', { maxAge: cookieMaxAge.year })
-    // window?.gtag('consent', 'update', {
-    //   ad_storage: 'granted',
-    //   analytics_storage: 'granted',
-    // })
+    window.gtag &&
+      window.gtag('consent', 'update', {
+        ad_storage: 'granted',
+        analytics_storage: 'granted',
+      })
   }
   const denyCookie = () => {
     setUserChose(true)
