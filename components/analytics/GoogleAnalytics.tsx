@@ -10,11 +10,10 @@ const GAScript = () => {
     <>
       <Script
         strategy="lazyOnload"
-        nonce={'gtm-89712jhds897312jak1dsa1'}
         src={`https://www.googletagmanager.com/gtag/js?id=${siteMetadata.analytics.googleAnalyticsId}`}
       />
 
-      <Script strategy="lazyOnload" id="ga-script" nonce={'gtm-89712jhds897312jak1dsa1'}>
+      <Script strategy="lazyOnload" id="ga-script">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -34,7 +33,6 @@ const GAScript = () => {
         <Script
           id="consupd"
           strategy="afterInteractive"
-          nonce={'gtm-89712jhds897312jak1dsa1'}
           dangerouslySetInnerHTML={{
             __html: `
             gtag('consent', 'update', {
