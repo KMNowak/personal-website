@@ -4,6 +4,7 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
+import { CookieConsent } from './CookieConsent'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { ReactNode } from 'react'
@@ -51,6 +52,7 @@ const LayoutWrapper = ({ children }: Props) => {
         </header>
         <main className="mb-auto">{children}</main>
         <Footer />
+        <CookieConsent />
       </div>
     </SectionContainer>
   )

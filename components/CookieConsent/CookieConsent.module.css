@@ -1,0 +1,21 @@
+.root {
+  @apply fixed bottom-3 right-3 z-10 w-[30%] min-w-[200px]
+  border border-black bg-white p-3;
+}
+
+.buttonBox {
+  @apply mt-2 flex justify-between align-middle;
+}
+
+.buttonDeny {
+  @apply border-black bg-white dark:bg-gray-900;
+}
+
+.buttonAccept {
+  @apply border border-white bg-gray-900
+  p-2 text-gray-100;
+}
+
+.buttonAccept:hover {
+  @apply border-gray-900 bg-gray-100 text-gray-900;
+}

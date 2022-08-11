@@ -61,7 +61,7 @@ module.exports = {
               fontWeight: '600',
               color: theme('colors.gray.900'),
             },
-            'h4,h5,h6': {
+            'h4,h5,h6,p,button': {
               color: theme('colors.gray.900'),
             },
             pre: {
@@ -129,7 +129,7 @@ module.exports = {
               fontWeight: '600',
               color: theme('colors.gray.100'),
             },
-            'h4,h5,h6': {
+            'h4,h5,h6,p,button': {
               color: theme('colors.gray.100'),
             },
             pre: {
