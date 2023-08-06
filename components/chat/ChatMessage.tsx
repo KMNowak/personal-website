@@ -1,5 +1,5 @@
-import { Message } from '@/types/chat-bot.types'
 import { FC } from 'react'
+import { Message } from 'ai'
 
 interface Props {
   message: Message
